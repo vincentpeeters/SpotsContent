@@ -15,22 +15,22 @@ public protocol Content {
 }
 
 public struct Heading: Content {
-    let level: UInt
-    let text: String
-    init(_ text: String, level: UInt) { self.level = level; self.text = text }
+    public let level: UInt
+    public let text: String
+    public init(_ text: String, level: UInt) { self.level = level; self.text = text }
 }
 
 public struct Text: Content {
-    let text: String
-     init(_ text: String) { self.text = text }
+    public let text: String
+    public init(_ text: String) { self.text = text }
 }
 
 public struct Image: Content {
-    let image: String
-    init(_ image: String) { self.image = image }
+    public let image: String
+    public init(_ image: String) { self.image = image }
 }
 
 public struct Link: Content {
-    let url: URL
-    init(_ url: URL) { self.url = url }
+    public let url: URL
+    public init(_ url: URL) { self.url = url }
 }
