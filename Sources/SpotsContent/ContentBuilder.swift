@@ -8,13 +8,13 @@
 import Foundation
 
 @_functionBuilder
-struct ContentBuilder {
+public struct ContentBuilder {
     
-    static func buildBlock(_ segments: Content...) -> [Content] {
+    public static func buildBlock(_ segments: Content...) -> [Content] {
         return segments
     }
     
-    static func buildBlock(_ segment: Content) -> [Content] {
+    public static func buildBlock(_ segment: Content) -> [Content] {
         return [segment]
     }
     
