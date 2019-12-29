@@ -27,10 +27,18 @@ public struct Text: Content {
 
 public struct Image: Content {
     public let image: String
-    public init(_ image: String) { self.image = image }
+    public let caption: String?
+    public init(_ image: String, caption: String? = nil) {
+        self.image = image
+        self.caption = caption
+    }
 }
 
 public struct Link: Content {
-    public let url: URL
-    public init(_ url: URL) { self.url = url }
+    public let title: String?
+    public let url: String
+    public init(_ url: String, title: String? = nil) {
+        self.url = url
+        self.title = title
+    }
 }
